@@ -19,6 +19,6 @@
         </Grid>
         <Label Content="Login" Margin="0,10,97,0" VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Right" Width="54"/>
         <Label Content="Register" Margin="0,10,18,0" VerticalAlignment="Top" RenderTransformOrigin="-0.1,1" FontSize="18" HorizontalAlignment="Right" Width="74"/>
-        <Frame Content="Frame" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="986" Margin="274,72,0,0" Source="/HotelManager;component/Authentication/LoginWelcome.xaml"/>
+        <Frame Content="Frame" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="986" Margin="274,72,0,0" Source="/HotelManager;component/Room/RoomList.xaml"/>
     </Grid>
 </Window>

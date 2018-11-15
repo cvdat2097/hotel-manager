@@ -25,3 +25,7 @@ C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Room\RoomStatusD
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Room\RoomList.g.cs
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Room\RoomStatus.g.cs
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Room\RoomStatusDetail.g.cs
+C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Receipt\SearchReceipt.baml
+C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Receipt\SearchReceipt.g.cs
+C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Receipt\ReceiptDetail.baml
+C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Debug\Receipt\ReceiptDetail.g.cs

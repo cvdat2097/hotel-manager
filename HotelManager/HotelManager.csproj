@@ -53,6 +53,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Receipt\ReceiptDetail.xaml.cs">
+      <DependentUpon>ReceiptDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\SearchReceipt.xaml.cs">
+      <DependentUpon>SearchReceipt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Room\RoomList.xaml.cs">
       <DependentUpon>RoomList.xaml</DependentUpon>
     </Compile>
@@ -102,6 +108,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Receipt\ReceiptDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Receipt\SearchReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Room\RoomList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

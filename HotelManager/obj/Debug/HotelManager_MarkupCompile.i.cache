@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\App.xaml
-81796301173
+10291655515
 
-16-1070858138
+18-605006572
 12-1401562060
-Authentication\Login.xaml;Authentication\LoginWelcome.xaml;Authentication\Register.xaml;Hotel\HotelSearch.xaml;MainWindow.xaml;Room\RoomList.xaml;Room\RoomStatus.xaml;Room\RoomStatusDetail.xaml;
+Authentication\Login.xaml;Authentication\LoginWelcome.xaml;Authentication\Register.xaml;Hotel\HotelSearch.xaml;MainWindow.xaml;Receipt\ReceiptDetail.xaml;Receipt\SearchReceipt.xaml;Room\RoomList.xaml;Room\RoomStatus.xaml;Room\RoomStatusDetail.xaml;
 
 False
 
