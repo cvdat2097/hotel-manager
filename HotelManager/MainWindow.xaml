@@ -20,7 +20,7 @@
         </Grid>
         <Label x:Name="lblLogin" Content="Login" Margin="0,10,97,0" VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Right" Width="54" MouseDown="lblLogin_MouseDown"/>
         <Label x:Name="lblRegister" Content="Register" Margin="0,10,18,0" VerticalAlignment="Top" RenderTransformOrigin="-0.1,1" FontSize="18" HorizontalAlignment="Right" Width="74" MouseDown="lblRegister_MouseDown"/>
-        <Frame x:Name="MainFrame" Content="" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="986" Margin="274,72,0,0" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" Content="" Margin="274,72,0,0" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden"/>
         <Label x:Name="lblPageName" Content="Current page's name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,21,0,0" FontWeight="Bold" FontStyle="Italic" FontSize="20"/>
     </Grid>
 </Window>
