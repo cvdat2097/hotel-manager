@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HotelManager.Authentication;
 
 namespace HotelManager
 {
@@ -23,6 +24,33 @@ namespace HotelManager
         public MainWindow()
         {
             InitializeComponent();
+
+            App.mainWindow = this;
+        }
+
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Login x = new Login();
+            App.mainWindow.Hide();
+            x.Show();            
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            String pageName = MainFrame.Source.ToString();
+            pageName = pageName.Substring(pageName.LastIndexOf('/') + 1);
+            pageName = pageName.Substring(0, pageName.Length - 5);
+
+            for (int i = 0; i < pageName.Length; i++)
+            {
+                if (Char.IsUpper(pageName[i]))
+                {
+                    pageName = pageName.Insert(i, " ");
+                    i++;
+                }
+            }
+
+            lblPageName.Content = pageName;
         }
     }
 }
