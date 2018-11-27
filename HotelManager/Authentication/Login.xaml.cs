@@ -19,14 +19,29 @@ namespace HotelManager.Authentication
     /// </summary>
     public partial class Login : Window
     {
+        private bool mainWindowLock = false;
+
         public Login()
         {
             InitializeComponent();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void LoginWindow_Closed(object sender, EventArgs e)
         {
-            App.mainWindow.Show();
+            if (!mainWindowLock)
+            {
+                App.mainWindow.Show();
+            }
+
+        }
+
+        private void lblRegister_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            mainWindowLock = true;
+
+            this.Close();
+            Register x = new Register();
+            x.Show();
         }
     }
 }

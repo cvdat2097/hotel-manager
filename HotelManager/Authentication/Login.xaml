@@ -1,13 +1,13 @@
-﻿<Window x:Class="HotelManager.Authentication.Login"
+﻿<Window x:Name="LoginWindow" x:Class="HotelManager.Authentication.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-       Title="Login" Height="234.926" Width="300" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+       Title="Login" Height="234.926" Width="300" WindowStartupLocation="CenterScreen" Closed="LoginWindow_Closed">
     <Grid>
         <Label Content="LOGIN" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="VNI-Auchon" Margin="23,10,0,0" FontSize="18"/>
         <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,69,0,0" Width="80" Height="28" FontSize="14"/>
         <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,105,0,0" Width="80" Height="30" FontSize="14"/>
         <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="108,158,0,0" FontSize="14"/>
-        <Label Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,159,0,0" FontSize="9"/>
+        <Label x:Name="lblRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,159,0,0" FontSize="9" MouseDown="lblRegister_MouseDown"/>
         <TextBox HorizontalAlignment="Left" Height="24" Margin="108,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
         <PasswordBox HorizontalAlignment="Left" Margin="108,108,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
 

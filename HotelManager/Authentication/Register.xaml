@@ -1,7 +1,7 @@
-﻿<Window x:Class="HotelManager.Authentication.Register"
+﻿<Window x:Name="RegisterWindow" x:Class="HotelManager.Authentication.Register"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Register" Height="512.1" Width="413" WindowStartupLocation="CenterScreen">
+        Title="Register" Height="512.1" Width="413" WindowStartupLocation="CenterScreen" Closed="RegisterWindow_Closed">
     <Grid>
         <Label Content="Customer Registration" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="VNI-Auchon" Margin="23,10,0,0" FontSize="18"/>
 
@@ -32,7 +32,7 @@
             </Grid>
         </GroupBox>
         <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="156,436,0,0" FontSize="14"/>
-        <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,437,0,0" FontSize="9"/>
+        <Label x:Name="lblLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,437,0,0" FontSize="9" MouseDown="lblLogin_MouseDown"/>
 
     </Grid>
 </Window>

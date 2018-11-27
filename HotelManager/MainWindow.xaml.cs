@@ -28,12 +28,6 @@ namespace HotelManager
             App.mainWindow = this;
         }
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Login x = new Login();
-            App.mainWindow.Hide();
-            x.Show();            
-        }
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
@@ -51,6 +45,20 @@ namespace HotelManager
             }
 
             lblPageName.Content = pageName;
+        }
+
+        private void lblLogin_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Login x = new Login();
+            App.mainWindow.Hide();
+            x.Show();  
+        }
+
+        private void lblRegister_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Register x = new Register();
+            App.mainWindow.Hide();
+            x.Show();
         }
     }
 }
