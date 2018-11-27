@@ -35,5 +35,6 @@
         </GroupBox>
         <Label Content="Rex Hotel" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Stencil"/>
         <Label Content="5 Stars, Ho Chi Minh City, Vietnam" HorizontalAlignment="Left" Margin="754,38,0,0" VerticalAlignment="Top"/>
+        <Button Content="Demo Detail" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="781,487,0,0" Click="Button_Click"/>
     </Grid>
 </Page>

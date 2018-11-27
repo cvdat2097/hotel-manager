@@ -37,6 +37,7 @@
                 <Button Content="Export" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
             </Grid>
         </GroupBox>
+        <Button Content="Demo Detail" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="773,487,0,0" Click="Button_Click"/>
 
     </Grid>
 </Page>

@@ -5,11 +5,12 @@
     <Grid>
         <Grid HorizontalAlignment="Left" Width="269" Background="#FFE6E6E6">
             <Label Content="Hotel Manager" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" FontFamily="Nirmala UI" Height="55" FontWeight="Bold" Width="259" Margin="10,10,0,0"/>
-            <Menu Margin="0,70,0,0" Padding="0 0 0 0" HorizontalAlignment="Left" Width="269" Background="{x:Null}">
-                <MenuItem Header="Hotel                    " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1"/>
-                <MenuItem Header="Room                     " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1"/>
-                <MenuItem Header="Bill                      " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1"/>
-                <MenuItem Header="Report                     " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1"/>
+            <Menu x:Name="MainMenu" Margin="0,70,0,0" Padding="0 0 0 0" HorizontalAlignment="Left" Width="269" Background="{x:Null}">
+                <MenuItem x:Name="menuItemHotel" Header="Hotel Search                   " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemHotel_Click"/>
+                <MenuItem x:Name="menuItemRoomList" Header="Room List                    " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemRoomList_Click"/>
+                <MenuItem x:Name="menuItemRoomStatus" Header="Room Status                    " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemRoomStatus_Click"/>
+                <MenuItem x:Name="menuItemReceiptSearch" Header="Receipt Search                     " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemReceiptSearch_Click"/>
+                <MenuItem x:Name="menuItemReport" Header="Report                     " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemReport_Click"/>
             </Menu>
         </Grid>
         <Grid Margin="269,0,-5,0" Background="White">
@@ -19,7 +20,7 @@
         </Grid>
         <Label x:Name="lblLogin" Content="Login" Margin="0,10,97,0" VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Right" Width="54" MouseDown="lblLogin_MouseDown"/>
         <Label x:Name="lblRegister" Content="Register" Margin="0,10,18,0" VerticalAlignment="Top" RenderTransformOrigin="-0.1,1" FontSize="18" HorizontalAlignment="Right" Width="74" MouseDown="lblRegister_MouseDown"/>
-        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="986" Margin="274,72,0,0" Source="/HotelManager;component/Room/RoomList.xaml" Navigated="MainFrame_Navigated"/>
+        <Frame x:Name="MainFrame" Content="" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="986" Margin="274,72,0,0" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden"/>
         <Label x:Name="lblPageName" Content="Current page's name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,21,0,0" FontWeight="Bold" FontStyle="Italic" FontSize="20"/>
     </Grid>
 </Window>

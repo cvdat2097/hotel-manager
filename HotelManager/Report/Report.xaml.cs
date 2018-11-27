@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelManager.Receipt
+namespace HotelManager.Report
 {
     /// <summary>
-    /// Interaction logic for ReceiptDetail.xaml
+    /// Interaction logic for Report.xaml
     /// </summary>
-    public partial class ReceiptDetail : Window
+    public partial class Report : Page
     {
-        public ReceiptDetail()
+        public Report()
         {
             InitializeComponent();
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            App.mainWindow.Show();            
         }
     }
 }

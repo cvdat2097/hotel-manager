@@ -29,3 +29,5 @@ C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\HotelManager.P
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\HotelManager.csproj.GenerateResource.Cache
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\HotelManager.exe
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\HotelManager.pdb
+C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\Report\Report.baml
+C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\Report\Report.g.cs

@@ -23,5 +23,10 @@ namespace HotelManager.Room
         {
             InitializeComponent();
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            App.mainWindow.Show();
+        }
     }
 }

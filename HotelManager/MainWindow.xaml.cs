@@ -21,11 +21,19 @@ namespace HotelManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static Uri HotelSearchPage = new Uri("Hotel/HotelSearch.xaml", UriKind.Relative);
+        private static Uri RoomListPage = new Uri("Room/RoomList.xaml", UriKind.Relative);
+        private static Uri RoomStatusPage = new Uri("Room/RoomStatus.xaml", UriKind.Relative);
+        private static Uri ReceiptSearchPage = new Uri("Receipt/SearchReceipt.xaml", UriKind.Relative);
+        private static Uri ReportPage = new Uri("Report/Report.xaml", UriKind.Relative);
+
         public MainWindow()
         {
             InitializeComponent();
 
             App.mainWindow = this;
+
+            MainFrame.Source = HotelSearchPage;
         }
 
 
@@ -51,7 +59,7 @@ namespace HotelManager
         {
             Login x = new Login();
             App.mainWindow.Hide();
-            x.Show();  
+            x.Show();
         }
 
         private void lblRegister_MouseDown(object sender, MouseButtonEventArgs e)
@@ -60,5 +68,36 @@ namespace HotelManager
             App.mainWindow.Hide();
             x.Show();
         }
+
+        private void menuItemHotel_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.Source != HotelSearchPage)
+            {
+                MainFrame.Source = HotelSearchPage;
+
+            }
+        }
+
+        private void menuItemRoomList_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Source = RoomListPage;
+            //MainFrame.Refresh();
+        }
+
+        private void menuItemRoomStatus_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Source = RoomStatusPage;
+        }
+
+        private void menuItemReceiptSearch_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Source = ReceiptSearchPage;
+        }
+
+        private void menuItemReport_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Source = ReportPage;
+        }
+
     }
 }

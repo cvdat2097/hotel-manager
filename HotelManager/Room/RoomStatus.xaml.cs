@@ -24,5 +24,12 @@ namespace HotelManager.Room
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.mainWindow.Hide();
+            RoomStatusDetail x = new RoomStatusDetail();
+            x.Show();
+        }
     }
 }

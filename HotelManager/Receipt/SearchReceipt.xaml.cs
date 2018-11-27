@@ -24,5 +24,12 @@ namespace HotelManager.Receipt
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.mainWindow.Hide();
+            ReceiptDetail x = new ReceiptDetail();
+            x.Show();
+        }
     }
 }

@@ -1,0 +1,14 @@
+﻿<Page x:Class="HotelManager.Report.Report"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="Report" Height="543" Width="945" Background="White">
+
+    <Grid>
+        <Button Content="Export reports" HorizontalAlignment="Left" Margin="385,231,0,0" VerticalAlignment="Top" Width="97" Height="34"/>
+
+    </Grid>
+</Page>
