@@ -31,7 +31,7 @@ namespace HotelManager.Authentication
         {
             if (Auth.GetLoginStatus() == false)
             {
-                MessageBox.Show("dkf");
+                MessageBox.Show("Application quitting...");
                 Environment.Exit(1);
             }
 
@@ -53,8 +53,7 @@ namespace HotelManager.Authentication
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
-            MessageBox.Show(Auth.Login("", "").ToString());
+            Auth.Login(txtUsername.Text, txtPassword.Password);
             if (Auth.GetLoginStatus() == true)
             {
                 this.Close();

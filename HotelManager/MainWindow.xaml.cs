@@ -71,6 +71,8 @@ namespace HotelManager
 
         private void lblLogin_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            Auth.Logout();
+
             Login x = new Login();
             App.mainWindow.Hide();
             x.Show();
