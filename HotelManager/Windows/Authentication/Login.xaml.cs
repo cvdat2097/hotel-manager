@@ -29,17 +29,14 @@ namespace HotelManager.Authentication
 
         private void LoginWindow_Closed(object sender, EventArgs e)
         {
-            if (Auth.GetLoginStatus() == false)
-            {
-                MessageBox.Show("Application quitting...");
-                Environment.Exit(1);
-            }
-
             if (!mainWindowLock)
             {
-                App.mainWindow.Show();
+                if (Auth.GetLoginStatus() == false)
+                {
+                    MessageBox.Show("Application quitting...");
+                    Environment.Exit(1);
+                }
             }
-
         }
 
         private void lblRegister_MouseDown(object sender, MouseButtonEventArgs e)
@@ -56,7 +53,13 @@ namespace HotelManager.Authentication
             Auth.Login(txtUsername.Text, txtPassword.Password);
             if (Auth.GetLoginStatus() == true)
             {
+                LoginWelcome x = new LoginWelcome();
+                x.Show();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Username or password is incorrect!");
             }
         }
     }

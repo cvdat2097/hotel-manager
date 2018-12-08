@@ -14,9 +14,9 @@ namespace HotelManager.Model
         public static String connectionString = "server=DESKTOP-TKKCCPU\\SQLEXPRESS; database=QuanLyKhachSan;user id=sa; password=123456";
         public static SqlConnection dbConnection = new SqlConnection(connectionString);
 
-        private static SqlCommand CreateCommand(String query)
+        public static IDbCommand CreateCommand(String query)
         {
-            SqlCommand cmd = new SqlCommand();
+            IDbCommand cmd = new SqlCommand();
             cmd.Connection = dbConnection;
             cmd.CommandText = query;
             cmd.CommandType = CommandType.Text;
@@ -29,9 +29,10 @@ namespace HotelManager.Model
         public static void Proc_TimKiemThongTinKhachSan(int giaCa, int hangSao) { }
         public static String Func_DangNhap_KhachHang(String TenDangNhap, String MatKhau)
         {
-            SqlCommand cmd = CreateCommand("SELECT dbo.Func_DangNhap_KhachHang(@TenDangNhap, @MatKhau)");
+            SqlCommand cmd = (SqlCommand) CreateCommand("SELECT dbo.Func_DangNhap_KhachHang(@TenDangNhap, @MatKhau)");
             cmd.Parameters.AddWithValue("@TenDangNhap", TenDangNhap);
             cmd.Parameters.AddWithValue("@MatKhau", MatKhau);
+            
 
             dbConnection.Open();
             String Username = (String)cmd.ExecuteScalar();

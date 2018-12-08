@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HotelManager.Services;
 
 namespace HotelManager.Authentication
 {
@@ -29,7 +30,15 @@ namespace HotelManager.Authentication
 
         private void RegisterWindow_Closed(object sender, EventArgs e)
         {
-            if (!mainWindowLock)
+            if (Auth.GetLoginStatus() == false)
+            {
+                if (!mainWindowLock)
+                {
+                    MessageBox.Show("Application quitting...");
+                    Environment.Exit(1);
+                }
+            }
+            else
             {
                 App.mainWindow.Show();
             }

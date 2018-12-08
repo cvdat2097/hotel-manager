@@ -12,11 +12,17 @@ namespace HotelManager.Services
     {
         private static bool isLoggedIn = false;
         private static String userId = "";
+        private static bool isCustomer = true;
 
 
         public static bool GetLoginStatus()
         {
             return isLoggedIn;
+        }
+
+        public static bool GetLoggedInUserTypeIsCustomer()
+        {
+            return isCustomer;
         }
 
         public static String GetLoggedInUserId()
@@ -36,16 +42,18 @@ namespace HotelManager.Services
             if (isForCustomer == false)
             {
                 userId = dbQLKS.Func_DangNhap_NhanVien(userName, password);
+                isCustomer = false;
             }
-
-            userId = dbQLKS.Func_DangNhap_KhachHang(userName, password);
+            else
+            {
+                userId = dbQLKS.Func_DangNhap_KhachHang(userName, password);
+            }
 
 
             if (userId != "0")
             {
                 isLoggedIn = true;
                 Auth.userId = userId;
-                MessageBox.Show(userId);
                 return true;
             }
             return false;
