@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HotelManager.Services;
 
 namespace HotelManager.Authentication
 {
@@ -28,6 +29,12 @@ namespace HotelManager.Authentication
 
         private void LoginWindow_Closed(object sender, EventArgs e)
         {
+            if (Auth.GetLoginStatus() == false)
+            {
+                MessageBox.Show("dkf");
+                Environment.Exit(1);
+            }
+
             if (!mainWindowLock)
             {
                 App.mainWindow.Show();
@@ -42,6 +49,16 @@ namespace HotelManager.Authentication
             this.Close();
             Register x = new Register();
             x.Show();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageBox.Show(Auth.Login("", "").ToString());
+            if (Auth.GetLoginStatus() == true)
+            {
+                this.Close();
+            }
         }
     }
 }

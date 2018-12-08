@@ -53,37 +53,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Receipt\ReceiptDetail.xaml.cs">
+    <Compile Include="Config\Constant.cs" />
+    <Compile Include="Config\Helper.cs" />
+    <Compile Include="Model\dbQLKS.cs" />
+    <Compile Include="Services\Auth.cs" />
+    <Compile Include="Windows\Receipt\ReceiptDetail.xaml.cs">
       <DependentUpon>ReceiptDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Receipt\SearchReceipt.xaml.cs">
+    <Compile Include="Windows\Receipt\SearchReceipt.xaml.cs">
       <DependentUpon>SearchReceipt.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Report\Report.xaml.cs">
+    <Compile Include="Windows\Report\Report.xaml.cs">
       <DependentUpon>Report.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room\RoomList.xaml.cs">
+    <Compile Include="Windows\Room\RoomList.xaml.cs">
       <DependentUpon>RoomList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room\RoomStatus.xaml.cs">
+    <Compile Include="Windows\Room\RoomStatus.xaml.cs">
       <DependentUpon>RoomStatus.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room\RoomStatusDetail.xaml.cs">
+    <Compile Include="Windows\Room\RoomStatusDetail.xaml.cs">
       <DependentUpon>RoomStatusDetail.xaml</DependentUpon>
     </Compile>
-    <Page Include="Authentication\Login.xaml">
+    <Page Include="Windows\Authentication\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Authentication\LoginWelcome.xaml">
+    <Page Include="Windows\Authentication\LoginWelcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Authentication\Register.xaml">
+    <Page Include="Windows\Authentication\Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Hotel\HotelSearch.xaml">
+    <Page Include="Windows\Hotel\HotelSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,43 +99,43 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Authentication\Login.xaml.cs">
+    <Compile Include="Windows\Authentication\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Authentication\LoginWelcome.xaml.cs">
+    <Compile Include="Windows\Authentication\LoginWelcome.xaml.cs">
       <DependentUpon>LoginWelcome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Authentication\Register.xaml.cs">
+    <Compile Include="Windows\Authentication\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Hotel\HotelSearch.xaml.cs">
+    <Compile Include="Windows\Hotel\HotelSearch.xaml.cs">
       <DependentUpon>HotelSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Receipt\ReceiptDetail.xaml">
+    <Page Include="Windows\Receipt\ReceiptDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Receipt\SearchReceipt.xaml">
+    <Page Include="Windows\Receipt\SearchReceipt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Report\Report.xaml">
+    <Page Include="Windows\Report\Report.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Room\RoomList.xaml">
+    <Page Include="Windows\Room\RoomList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Room\RoomStatus.xaml">
+    <Page Include="Windows\Room\RoomStatus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Room\RoomStatusDetail.xaml">
+    <Page Include="Windows\Room\RoomStatusDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

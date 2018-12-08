@@ -6,7 +6,7 @@
         <Label Content="LOGIN" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="VNI-Auchon" Margin="23,10,0,0" FontSize="18"/>
         <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,69,0,0" Width="80" Height="28" FontSize="14"/>
         <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,105,0,0" Width="80" Height="30" FontSize="14"/>
-        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="108,158,0,0" FontSize="14"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="108,158,0,0" FontSize="14" Click="btnLogin_Click"/>
         <Label x:Name="lblRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,159,0,0" FontSize="9" MouseDown="lblRegister_MouseDown"/>
         <TextBox HorizontalAlignment="Left" Height="24" Margin="108,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
         <PasswordBox HorizontalAlignment="Left" Margin="108,108,0,0" VerticalAlignment="Top" Width="156" Height="24"/>

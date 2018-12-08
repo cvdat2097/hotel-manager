@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HotelManager.Authentication;
+using HotelManager.Services;
 
 namespace HotelManager
 {
@@ -21,38 +22,51 @@ namespace HotelManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static Uri HotelSearchPage = new Uri("Hotel/HotelSearch.xaml", UriKind.Relative);
-        private static Uri RoomListPage = new Uri("Room/RoomList.xaml", UriKind.Relative);
-        private static Uri RoomStatusPage = new Uri("Room/RoomStatus.xaml", UriKind.Relative);
-        private static Uri ReceiptSearchPage = new Uri("Receipt/SearchReceipt.xaml", UriKind.Relative);
-        private static Uri ReportPage = new Uri("Report/Report.xaml", UriKind.Relative);
+        private static Uri HotelSearchPage = new Uri("Windows/Hotel/HotelSearch.xaml", UriKind.Relative);
+        private static Uri RoomListPage = new Uri("Windows/Room/RoomList.xaml", UriKind.Relative);
+        private static Uri RoomStatusPage = new Uri("Windows/Room/RoomStatus.xaml", UriKind.Relative);
+        private static Uri ReceiptSearchPage = new Uri("Windows/Receipt/SearchReceipt.xaml", UriKind.Relative);
+        private static Uri ReportPage = new Uri("Windows/Report/Report.xaml", UriKind.Relative);
 
         public MainWindow()
         {
             InitializeComponent();
 
             App.mainWindow = this;
-
             MainFrame.Source = HotelSearchPage;
+            // Kiem tra khi Cua so xuat hien
+            if (Auth.GetLoginStatus() == false)
+            {
+                App.mainWindow.Hide();
+                Login x = new Login();
+                x.Show();
+            }
+            else
+            {
+                MessageBox.Show("change");
+            }
         }
 
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-            String pageName = MainFrame.Source.ToString();
-            pageName = pageName.Substring(pageName.LastIndexOf('/') + 1);
-            pageName = pageName.Substring(0, pageName.Length - 5);
-
-            for (int i = 0; i < pageName.Length; i++)
+            if (Auth.GetLoginStatus() == true)
             {
-                if (Char.IsUpper(pageName[i]))
-                {
-                    pageName = pageName.Insert(i, " ");
-                    i++;
-                }
-            }
+                String pageName = MainFrame.Source.ToString();
+                pageName = pageName.Substring(pageName.LastIndexOf('/') + 1);
+                pageName = pageName.Substring(0, pageName.Length - 5);
 
-            lblPageName.Content = pageName;
+                for (int i = 0; i < pageName.Length; i++)
+                {
+                    if (Char.IsUpper(pageName[i]))
+                    {
+                        pageName = pageName.Insert(i, " ");
+                        i++;
+                    }
+                }
+
+                lblPageName.Content = pageName;
+            }
         }
 
         private void lblLogin_MouseDown(object sender, MouseButtonEventArgs e)

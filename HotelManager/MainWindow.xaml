@@ -1,7 +1,8 @@
-﻿<Window x:Class="HotelManager.MainWindow"
+﻿<Window x:Name="frmMain" x:Class="HotelManager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Hotel Management Tool" Height="645.994" Width="1267.921" WindowStartupLocation="CenterScreen" FontSize="18">
+        Title="Hotel Management Tool" Height="645.994" Width="1267.921" WindowStartupLocation="CenterScreen" FontSize="18" 
+        >
     <Grid>
         <Grid HorizontalAlignment="Left" Width="269" Background="#FFE6E6E6">
             <Label Content="Hotel Manager" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" FontFamily="Nirmala UI" Height="55" FontWeight="Bold" Width="259" Margin="10,10,0,0"/>
