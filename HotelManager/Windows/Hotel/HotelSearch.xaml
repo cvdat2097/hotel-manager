@@ -25,11 +25,11 @@
                     <ComboBoxItem Content="4"/>
                     <ComboBoxItem Content="5"/>
                 </ComboBox>
-                <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="127,134,0,0" VerticalAlignment="Top" Width="107"/>
+                <Button x:Name="btnShowRoom" Content="Show Rooms" HorizontalAlignment="Left" Margin="127,134,0,0" VerticalAlignment="Top" Width="107" Click="btnShowRoom_Click"/>
             </Grid>
         </GroupBox>
 
-        <DataGrid x:Name="dgHotel" Margin="15,10,0,0" VerticalAlignment="Top" Height="497" Width="658" HorizontalAlignment="Left" IsSynchronizedWithCurrentItem="False" ColumnWidth="*" IsReadOnly="True"/>
+        <DataGrid x:Name="dgHotel" Margin="15,10,0,0" VerticalAlignment="Top" Height="497" Width="658" HorizontalAlignment="Left" IsSynchronizedWithCurrentItem="False" ColumnWidth="*" IsReadOnly="True" MouseDoubleClick="dgHotel_MouseDoubleClick"/>
         <Label x:Name="lblStatus" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="744,184,0,0" FontSize="10" HorizontalContentAlignment="Right" Width="176"/>
 
     </Grid>

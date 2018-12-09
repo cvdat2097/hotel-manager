@@ -22,18 +22,13 @@ namespace HotelManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static Uri HotelSearchPage = new Uri("Windows/Hotel/HotelSearch.xaml", UriKind.Relative);
-        private static Uri RoomListPage = new Uri("Windows/Room/RoomList.xaml", UriKind.Relative);
-        private static Uri RoomStatusPage = new Uri("Windows/Room/RoomStatus.xaml", UriKind.Relative);
-        private static Uri ReceiptSearchPage = new Uri("Windows/Receipt/SearchReceipt.xaml", UriKind.Relative);
-        private static Uri ReportPage = new Uri("Windows/Report/Report.xaml", UriKind.Relative);
-
         public MainWindow()
         {
             InitializeComponent();
 
             App.mainWindow = this;
-            MainFrame.Source = HotelSearchPage;
+            MainFrame.Source = SharedData.HotelSearchPage;
+            SharedData.MainFrame = MainFrame;
 
             //// Kiem tra khi Cua so xuat hien
             //if (Auth.GetLoginStatus() == false)
@@ -84,32 +79,32 @@ namespace HotelManager
 
         private void menuItemHotel_Click(object sender, RoutedEventArgs e)
         {
-            if (MainFrame.Source != HotelSearchPage)
+            if (MainFrame.Source != SharedData.HotelSearchPage)
             {
-                MainFrame.Source = HotelSearchPage;
+                MainFrame.Source = SharedData.HotelSearchPage;
 
             }
         }
 
         private void menuItemRoomList_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Source = RoomListPage;
+            MainFrame.Source = SharedData.RoomListPage;
             //MainFrame.Refresh();
         }
 
         private void menuItemRoomStatus_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Source = RoomStatusPage;
+            MainFrame.Source = SharedData.RoomStatusPage;
         }
 
         private void menuItemReceiptSearch_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Source = ReceiptSearchPage;
+            MainFrame.Source = SharedData.ReceiptSearchPage;
         }
 
         private void menuItemReport_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Source = ReportPage;
+            MainFrame.Source = SharedData.ReportPage;
         }
 
         private void frmMain_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

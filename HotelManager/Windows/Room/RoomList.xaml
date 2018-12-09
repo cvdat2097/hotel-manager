@@ -7,25 +7,19 @@
       d:DesignHeight="300" d:DesignWidth="300"
 	Title="RoomList"  Height="543" Width="945" Background="White">
 
-    <Grid>
-        <DataGrid Margin="15,10,0,0" VerticalAlignment="Top" Height="497" Width="658" HorizontalAlignment="Left">
-            <DataGrid.Columns>
-                <DataGridTextColumn  Header="Room Number"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat="dsf"/>
-                <DataGridTextColumn  Header="Type"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="Price"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="Status"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-            </DataGrid.Columns>
+    <Grid x:Name="pgRoomList" IsVisibleChanged="pgRoomList_IsVisibleChanged">
+        <DataGrid x:Name="dgRoom" Margin="15,10,0,0" VerticalAlignment="Top" Height="497" Width="658" HorizontalAlignment="Left" ColumnWidth="*" IsReadOnly="True">
         </DataGrid>
         <GroupBox Header="Room Booking" HorizontalAlignment="Left" Margin="679,69,0,0" VerticalAlignment="Top" Height="207" Width="256">
             <Grid>
-                <Button Content="Book" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Button x:Name="btnBook" Content="Book" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Click="btnBook_Click"/>
                 <Label Content="Check-in date:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="97"/>
                 <Label Content="Check-out date:" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="120"/>
-                <DatePicker HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="224"/>
-                <DatePicker HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="224"/>
+                <DatePicker x:Name="dpkCheckin" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="224"/>
+                <DatePicker x:Name="dpkCheckout" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="224"/>
             </Grid>
         </GroupBox>
-        <Label Content="Rex Hotel" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Stencil"/>
-        <Label Content="5 Stars, Ho Chi Minh City, Vietnam" HorizontalAlignment="Left" Margin="754,38,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblHotelName" Content="Rex Hotel" HorizontalAlignment="Left" Margin="689,8,0,0" VerticalAlignment="Top" FontSize="25" FontFamily="Stencil" Width="246"/>
+        <Label x:Name="lblAddress" Content="5 Stars, Ho Chi Minh City, Vietnam" HorizontalAlignment="Left" Margin="754,43,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

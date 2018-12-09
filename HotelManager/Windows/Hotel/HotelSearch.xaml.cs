@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using HotelManager.Model;
+using HotelManager.Services;
 
 namespace HotelManager.Hotel
 {
@@ -23,37 +24,28 @@ namespace HotelManager.Hotel
     /// </summary>
     public partial class HotelSearch : Page
     {
-        public class HotelRow
+        private static void ShowRoomList(HotelRow hotel)
         {
-            public String maKS { get; set; }
-            public String tenKS { get; set; }
-            public int soSao { get; set; }
-            public String soNha { get; set; }
-            public String duong { get; set; }
-            public String quan { get; set; }
-            public String thanhPho { get; set; }
-            public String moTa { get; set; }
-            public int giaTB { get; set; }
-
-            public HotelRow()
-            {
-
-            }
-
-            public HotelRow(String maKS, String tenKS, int soSao, int soNha, String duong, String quan, String thanhPho, String moTa, int giaTB)
-            {
-
-            }
+            // Change page
+            SharedData.CurrentHotel = hotel;
+            SharedData.MainFrame.Source = SharedData.RoomListPage;
         }
+
         public HotelSearch()
         {
             InitializeComponent();
+
+
+            // TODO: Remove here
+            //ShowRoomList("KS03854465");
         }
 
         private void pgHotelSearch_Initialized(object sender, EventArgs e)
         {
 
         }
+
+
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
@@ -117,6 +109,7 @@ namespace HotelManager.Hotel
 
                 List<HotelRow> HotelList = new List<HotelRow>();
 
+                // Fill Datagrid
                 while (dr.Read())
                 {
                     HotelRow row = new HotelRow();
@@ -139,6 +132,33 @@ namespace HotelManager.Hotel
 
                 // Notify
                 lblStatus.Content = "Found " + HotelList.Count.ToString();
+            }
+        }
+
+        private void dgHotel_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            HotelRow SelectedHotel = ((HotelRow)dgHotel.Items[dgHotel.SelectedIndex]);
+
+            if (SelectedHotel != null)
+            {
+                ShowRoomList(SelectedHotel);
+            }
+        }
+
+        private void btnShowRoom_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgHotel.SelectedIndex != -1)
+            {
+                HotelRow SelectedHotel = ((HotelRow)dgHotel.Items[dgHotel.SelectedIndex]);
+
+                if (SelectedHotel != null)
+                {
+                    ShowRoomList(SelectedHotel);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a hotel first");
             }
         }
     }

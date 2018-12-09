@@ -57,6 +57,7 @@
     <Compile Include="Config\Helper.cs" />
     <Compile Include="Model\dbQLKS.cs" />
     <Compile Include="Services\Auth.cs" />
+    <Compile Include="Services\SharedData.cs" />
     <Compile Include="Windows\Receipt\ReceiptDetail.xaml.cs">
       <DependentUpon>ReceiptDetail.xaml</DependentUpon>
     </Compile>

@@ -79,8 +79,31 @@ namespace HotelManager.Model
         }
 
 
-        public static void Proc_DatPhong(String MaKhachSan, String MaLoaiPhong, DateTime NgayDat, DateTime NgayBatDau,
-            DateTime NgayTraPhong, String TinhTrang, String TenDangNhap, String MatKhau) { }
+        public static int Proc_DatPhong(String MaKhachSan, String MaLoaiPhong, DateTime NgayDat, DateTime NgayBatDau,
+            DateTime NgayTraPhong, String TinhTrang, String MaKH) 
+        {
+            SqlCommand cmd = new SqlCommand("Proc_DatPhong", dbConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaKhachSan", MaKhachSan);
+            cmd.Parameters.AddWithValue("@MaLoaiPhong", MaLoaiPhong);
+            cmd.Parameters.AddWithValue("@NgayDat", NgayDat);
+            cmd.Parameters.AddWithValue("@NgayBatDau", NgayBatDau);
+            cmd.Parameters.AddWithValue("@NgayTraPhong", NgayTraPhong);
+            cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+
+            var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
+
+            dbConnection.Open();
+            int Status = (int)cmd.ExecuteNonQuery();
+            dbConnection.Close();
+
+            return (int)returnParameter.Value;
+        }
+
+
         public static void Proc_LapHoaDon(String MaDP, String MaKS, String TenDangNhap, String MatKhau) { }
         public static void Proc_KiemTraTinhTrangPhong(String MaLoaiPhong, DateTime Ngay, String MaKS, String TenDangNhap, String MatKhau,
             String NhapButton, String PhongDuocChon) { }
