@@ -25,15 +25,37 @@ namespace HotelManager.Model
             return cmd;
         }
 
-        public static void Proc_DangKyTaiKhoanKhachHang(String HoTen, String TenDangNhap, String MatKhau, int SoCMND, String DiaChi,
-            int SoDienThoai, String MoTa, String Email) { }
+        public static int Proc_DangKyTaiKhoanKhachHang(String HoTen, String TenDangNhap, String MatKhau, int SoCMND, String DiaChi,
+            int SoDienThoai, String MoTa, String Email)
+        {
+            SqlCommand cmd = new SqlCommand("Proc_DangKyTaiKhoanKhachHang", dbConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@hoTen", HoTen);
+            cmd.Parameters.AddWithValue("@tenDangNhap", TenDangNhap);
+            cmd.Parameters.AddWithValue("@matKhau", MatKhau);
+            cmd.Parameters.AddWithValue("@soCMND", SoCMND);
+            cmd.Parameters.AddWithValue("@diaChi", DiaChi);
+            cmd.Parameters.AddWithValue("@soDienThoai", SoDienThoai);
+            cmd.Parameters.AddWithValue("@moTa", MoTa);
+            cmd.Parameters.AddWithValue("@email", Email);
+
+            var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
+
+            dbConnection.Open();
+            int Status = (int)cmd.ExecuteNonQuery();
+            dbConnection.Close();
+
+            return (int) returnParameter.Value;
+        }
         public static void Proc_TimKiemThongTinKhachSan(int giaCa, int hangSao) { }
         public static String Func_DangNhap_KhachHang(String TenDangNhap, String MatKhau)
         {
-            SqlCommand cmd = (SqlCommand) CreateCommand("SELECT dbo.Func_DangNhap_KhachHang(@TenDangNhap, @MatKhau)");
+            SqlCommand cmd = (SqlCommand)CreateCommand("SELECT dbo.Func_DangNhap_KhachHang(@TenDangNhap, @MatKhau)");
             cmd.Parameters.AddWithValue("@TenDangNhap", TenDangNhap);
             cmd.Parameters.AddWithValue("@MatKhau", MatKhau);
-            
+
 
             dbConnection.Open();
             String Username = (String)cmd.ExecuteScalar();

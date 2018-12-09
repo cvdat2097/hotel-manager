@@ -11,28 +11,29 @@
                 <Label Content="Password" VerticalAlignment="Top" Margin="9,57,239,0" Height="30" FontSize="14"/>
                 <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="89,303,0,0" FontSize="14"/>
                 <Label Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="213,305,0,0" FontSize="9"/>
-                <TextBox HorizontalAlignment="Left" Height="24" Margin="141,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
-                <PasswordBox HorizontalAlignment="Left" Margin="141,57,0,0" VerticalAlignment="Top" Width="209" Height="24"/>
+                <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="24" Margin="141,22,0,0" TextWrapping="Wrap" Text="abc1123" VerticalAlignment="Top" Width="209" VerticalContentAlignment="Center"/>
+                <PasswordBox x:Name="txtPassword1" HorizontalAlignment="Left" Margin="141,57,0,0" VerticalAlignment="Top" Width="209" Height="24" VerticalContentAlignment="Center" Password="123"/>
                 <Label Content="Confirm password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,93,0,0" Width="132" Height="30" FontSize="14"/>
-                <PasswordBox HorizontalAlignment="Left" Margin="141,93,0,0" VerticalAlignment="Top" Width="209" Height="24"/>
+                <PasswordBox x:Name="txtPassword2" HorizontalAlignment="Left" Margin="141,93,0,0" VerticalAlignment="Top" Width="209" Height="24" VerticalContentAlignment="Center" Password="123"/>
                 <Label Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,128,0,0" Width="80" Height="28" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="24" Margin="141,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+                <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="24" Margin="141,128,0,0" TextWrapping="Wrap" Text="abc123@gmail.com" VerticalAlignment="Top" Width="209" VerticalContentAlignment="Center"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Info" HorizontalAlignment="Left" Margin="23,240,0,0" VerticalAlignment="Top" Height="180" Width="372">
             <Grid>
                 <Label Content="Full name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,14,0,0" Width="80" Height="28" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="24" Margin="141,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+                <TextBox x:Name="txtFullname" HorizontalAlignment="Left" Height="24" Margin="141,14,0,0" TextWrapping="Wrap" Text="Nguyen Van Ti" VerticalAlignment="Top" Width="209" VerticalContentAlignment="Center"/>
                 <Label Content="ID Card" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,47,0,0" Width="80" Height="28" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="24" Margin="141,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+                <TextBox x:Name="txtIdCard" HorizontalAlignment="Left" Height="24" Margin="141,47,0,0" TextWrapping="Wrap" Text="2310009" VerticalAlignment="Top" Width="209" VerticalContentAlignment="Center"/>
                 <Label Content="Phone number" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0" Width="115" Height="28" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="24" Margin="141,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+                <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="24" Margin="141,80,0,0" TextWrapping="Wrap" Text="83742834" VerticalAlignment="Top" Width="209" VerticalContentAlignment="Center"/>
                 <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,113,0,0" Width="115" Height="28" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="24" Margin="141,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+                <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="24" Margin="141,113,0,0" TextWrapping="Wrap" Text="87 JKDF" VerticalAlignment="Top" Width="209" VerticalContentAlignment="Center"/>
             </Grid>
         </GroupBox>
-        <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="156,436,0,0" FontSize="14"/>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="156,436,0,0" FontSize="14" Click="btnRegister_Click"/>
         <Label x:Name="lblLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,437,0,0" FontSize="9" MouseDown="lblLogin_MouseDown"/>
+        <Label x:Name="lblStatus" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,448,0,0" Width="95" HorizontalContentAlignment="Right" FontSize="10"/>
 
     </Grid>
 </Window>

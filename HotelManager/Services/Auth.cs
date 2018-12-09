@@ -65,5 +65,21 @@ namespace HotelManager.Services
             userId = "";
             isCustomer = true;
         }
+
+        public static bool Register()
+        {
+            bool dataIsValid = true;
+            // Validate data
+
+
+            // Query DB
+            if (dataIsValid)
+            {
+
+                
+            }
+
+            return true;
+        }
     }
 }
