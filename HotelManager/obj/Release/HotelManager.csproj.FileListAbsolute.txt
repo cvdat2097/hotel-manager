@@ -31,3 +31,36 @@ C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\Windows\Report
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\Windows\Room\RoomList.g.cs
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\Windows\Room\RoomStatus.g.cs
 C:\Users\Cao V. Dat\Desktop\HotelManager\HotelManager\obj\Release\Windows\Room\RoomStatusDetail.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\bin\Release\HotelManager.exe.config
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.exe
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.pdb
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\bin\Release\HotelManager.exe
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\bin\Release\HotelManager.pdb
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.csprojResolveAssemblyReference.cache
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Authentication\Login.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Authentication\LoginWelcome.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Authentication\Register.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Hotel\HotelSearch.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\MainWindow.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Receipt\ReceiptDetail.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Receipt\SearchReceipt.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Report\Report.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Room\RoomList.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Room\RoomStatus.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Room\RoomStatusDetail.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Authentication\Login.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Authentication\LoginWelcome.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Authentication\Register.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Hotel\HotelSearch.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\MainWindow.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Receipt\ReceiptDetail.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Receipt\SearchReceipt.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Report\Report.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Room\RoomList.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Room\RoomStatus.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Room\RoomStatusDetail.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\App.g.cs
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager_MarkupCompile.cache
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.g.resources
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.Properties.Resources.resources
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.csproj.GenerateResource.Cache

@@ -50,7 +50,16 @@ namespace HotelManager.Authentication
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Auth.Login(txtUsername.Text, txtPassword.Password);
+            if (chkStaff.IsChecked == true)
+            {
+                Auth.Login(txtUsername.Text, txtPassword.Password, false);
+
+            }
+            else
+            {
+                Auth.Login(txtUsername.Text, txtPassword.Password);
+            }
+
             if (Auth.GetLoginStatus() == true)
             {
                 LoginWelcome x = new LoginWelcome();

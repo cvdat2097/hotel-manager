@@ -62,6 +62,8 @@ namespace HotelManager.Services
         public static void Logout()
         {
             isLoggedIn = false;
+            userId = "";
+            isCustomer = true;
         }
     }
 }
