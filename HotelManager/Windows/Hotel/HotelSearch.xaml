@@ -1,52 +1,36 @@
-﻿<Page x:Class="HotelManager.Hotel.HotelSearch"
+﻿<Page x:Name="pgHotelSearch" x:Class="HotelManager.Hotel.HotelSearch"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-	Title="HotelSearch" Height="543" Width="945" Background="White">
+	Title="HotelSearch" Height="543" Width="945" Background="White" Initialized="pgHotelSearch_Initialized">
 
     <Grid>
-        <GroupBox Header="Search" HorizontalAlignment="Left" Margin="679,0,0,0" VerticalAlignment="Top" Height="195" Width="256">
+        <GroupBox Header="Search" HorizontalAlignment="Left" Margin="679,0,0,0" VerticalAlignment="Top" Height="216" Width="256">
             <Grid>
-                <Button Content="Search" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-                <ComboBox HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="169" IsReadOnly="True" IsEditable="True" FontSize="14">
-                    <CheckBox Content="New York" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <CheckBox Content="Chicago" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <CheckBox Content="Ho Chi Minh" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                </ComboBox>
+                <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Click="btnSearch_Click"/>
+                <TextBox x:Name="txtCity" Text="Hà Nội" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="169" IsReadOnly="False" FontSize="14" Height="25" />
                 <Label Content="City:" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Margin="11,97,0,0" VerticalAlignment="Top" Width="106" FontSize="14" />
-                <Label Content="From:" HorizontalAlignment="Left" Margin="11,71,0,0" VerticalAlignment="Top" Width="43"/>
-                <TextBox HorizontalAlignment="Left" Margin="123,97,0,0" VerticalAlignment="Top" Width="111" FontSize="14" />
-                <Label Content="To:" HorizontalAlignment="Left" Margin="123,71,0,0" VerticalAlignment="Top" Width="26"/>
+                <TextBox x:Name="txtPriceFrom" HorizontalAlignment="Left" Margin="11,97,0,0" VerticalAlignment="Top" Width="106" FontSize="14" />
+                <Label Content="Price from:" HorizontalAlignment="Left" Margin="11,71,0,0" VerticalAlignment="Top" Width="91"/>
+                <TextBox x:Name="txtPriceTo" HorizontalAlignment="Left" Margin="123,97,0,0" VerticalAlignment="Top" Width="111" FontSize="14" />
+                <Label Content="Price to:" HorizontalAlignment="Left" Margin="123,71,0,0" VerticalAlignment="Top" Width="70"/>
                 <Label Content="Star:" HorizontalAlignment="Left" Margin="184,11,0,0" VerticalAlignment="Top"/>
-                <ComboBox HorizontalAlignment="Left" Margin="184,37,0,0" VerticalAlignment="Top" Width="50" IsReadOnly="True" IsEditable="True" FontSize="14">
+                <ComboBox x:Name="cmbStar" HorizontalAlignment="Left" Margin="184,37,0,0" VerticalAlignment="Top" Width="50" IsReadOnly="True" FontSize="14">
                     <ComboBoxItem Content="1"/>
                     <ComboBoxItem Content="2"/>
                     <ComboBoxItem Content="3"/>
                     <ComboBoxItem Content="4"/>
                     <ComboBoxItem Content="5"/>
                 </ComboBox>
-                <Button Content="Clear" HorizontalAlignment="Left" Margin="127,134,0,0" VerticalAlignment="Top" Width="107"/>
+                <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="127,134,0,0" VerticalAlignment="Top" Width="107"/>
             </Grid>
         </GroupBox>
 
-        <DataGrid Margin="15,10,0,0" VerticalAlignment="Top" Height="497" Width="658" HorizontalAlignment="Left">
-            <DataGrid.Columns>
-                <DataGridTextColumn  Header="ID"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat="dsf"/>
-                <DataGridTextColumn  Header="Name"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="Star"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="Avg Price"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="St Number"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="St Name"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="County"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="City"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="Description"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-                <DataGridTextColumn  Header="Actions"  Binding="{x:Null}" ClipboardContentBinding="{x:Null}" HeaderStringFormat=""/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <DataGrid x:Name="dgHotel" Margin="15,10,0,0" VerticalAlignment="Top" Height="497" Width="658" HorizontalAlignment="Left" IsSynchronizedWithCurrentItem="False" ColumnWidth="*" IsReadOnly="True"/>
+        <Label x:Name="lblStatus" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="744,184,0,0" FontSize="10" HorizontalContentAlignment="Right" Width="176"/>
 
     </Grid>
 </Page>

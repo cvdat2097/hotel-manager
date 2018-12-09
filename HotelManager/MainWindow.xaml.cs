@@ -34,17 +34,14 @@ namespace HotelManager
 
             App.mainWindow = this;
             MainFrame.Source = HotelSearchPage;
-            // Kiem tra khi Cua so xuat hien
-            if (Auth.GetLoginStatus() == false)
-            {
-                App.mainWindow.Hide();
-                Login x = new Login();
-                x.Show();
-            }
-            else
-            {
-                MessageBox.Show("change");
-            }
+
+            //// Kiem tra khi Cua so xuat hien
+            //if (Auth.GetLoginStatus() == false)
+            //{
+            //    App.mainWindow.Hide();
+            //    Login x = new Login();
+            //    x.Show();
+            //}
         }
 
 
@@ -115,5 +112,19 @@ namespace HotelManager
             MainFrame.Source = ReportPage;
         }
 
+        private void frmMain_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (this.Visibility == Visibility.Visible)
+            {
+                if (Auth.GetLoginStatus())
+                {
+                    lblLogin.Content = "Logout";
+                }
+                else
+                {
+                    lblLogin.Content = "Login";
+                }
+            }
+        }
     }
 }

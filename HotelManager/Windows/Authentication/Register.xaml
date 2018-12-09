@@ -33,7 +33,7 @@
         </GroupBox>
         <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="156,436,0,0" FontSize="14" Click="btnRegister_Click"/>
         <Label x:Name="lblLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,437,0,0" FontSize="9" MouseDown="lblLogin_MouseDown"/>
-        <Label x:Name="lblStatus" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,448,0,0" Width="95" HorizontalContentAlignment="Right" FontSize="10"/>
+        <Label x:Name="lblStatus" Content="Login status here" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,448,0,0" Width="95" HorizontalContentAlignment="Right" FontSize="10"/>
 
     </Grid>
 </Window>
