@@ -20,15 +20,31 @@ namespace HotelManager.Services
 
         public static HotelRow CurrentHotel; // Switch to RoomList
         public static ReceiptRow CurrentReceipt; // Switch to ReceiptDetail
+        public static RoomRow CurrentRoom; // Switch to RoomtStatusDetail
     }
 
-     public class ReceiptRow
-        {
-            public String MaHD { get; set; }
-            public DateTime NgayLap { get; set; }
-            public double TongTien { get; set; }
-            public String MaDP { get; set; }
-        }
+    public class RoomTypeRow
+    {
+        public String MaLoaiPhong { get; set; }
+        public String TenLoaiPhong { get; set; }
+    }
+
+    public class RoomRow
+    {
+        public String MaPhong { get; set; }
+        public String LoaiPhong { get; set; }
+        public String SoPhong { get; set; }
+        public String TrangThai { get; set; }
+
+    }
+
+    public class ReceiptRow
+    {
+        public String MaHD { get; set; }
+        public DateTime NgayLap { get; set; }
+        public double TongTien { get; set; }
+        public String MaDP { get; set; }
+    }
 
     public class HotelRow
     {

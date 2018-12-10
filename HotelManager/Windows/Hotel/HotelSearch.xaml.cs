@@ -137,11 +137,14 @@ namespace HotelManager.Hotel
 
         private void dgHotel_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            HotelRow SelectedHotel = ((HotelRow)dgHotel.Items[dgHotel.SelectedIndex]);
-
-            if (SelectedHotel != null)
+            if (dgHotel.SelectedIndex != -1)
             {
-                ShowRoomList(SelectedHotel);
+                HotelRow SelectedHotel = ((HotelRow)dgHotel.Items[dgHotel.SelectedIndex]);
+
+                if (SelectedHotel != null)
+                {
+                    ShowRoomList(SelectedHotel);
+                }
             }
         }
 
