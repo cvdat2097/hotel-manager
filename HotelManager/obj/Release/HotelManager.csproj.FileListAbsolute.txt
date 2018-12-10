@@ -64,3 +64,5 @@ C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelMana
 C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.g.resources
 C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.Properties.Resources.resources
 C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\HotelManager.csproj.GenerateResource.Cache
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Receipt\ExportReceipt.baml
+C:\Users\LAP10719-local\Desktop\hotel-manager\HotelManager\obj\Release\Windows\Receipt\ExportReceipt.g.cs

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HotelManager.Authentication;
 using HotelManager.Services;
+using HotelManager.Windows.Receipt;
 
 namespace HotelManager
 {
@@ -119,6 +120,23 @@ namespace HotelManager
                 {
                     lblLogin.Content = "Login";
                 }
+            }
+        }
+
+        private void menuItemExportBill_Click(object sender, RoutedEventArgs e)
+        {
+            if (Auth.GetLoginStatus() && Auth.GetLoggedInUserTypeIsCustomer() == false)
+            {
+                App.mainWindow.Hide();
+                ExportReceipt x = new ExportReceipt();
+                x.Show();
+            }
+
+            else
+            {
+                App.mainWindow.Hide();
+                Login x = new Login();
+                x.Show();
             }
         }
     }

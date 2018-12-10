@@ -58,6 +58,9 @@
     <Compile Include="Model\dbQLKS.cs" />
     <Compile Include="Services\Auth.cs" />
     <Compile Include="Services\SharedData.cs" />
+    <Compile Include="Windows\Receipt\ExportReceipt.xaml.cs">
+      <DependentUpon>ExportReceipt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Receipt\ReceiptDetail.xaml.cs">
       <DependentUpon>ReceiptDetail.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\Receipt\ExportReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Receipt\ReceiptDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

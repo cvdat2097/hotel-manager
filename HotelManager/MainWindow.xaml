@@ -10,6 +10,7 @@
                 <MenuItem x:Name="menuItemHotel" Header="Hotel Search                   " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemHotel_Click"/>
                 <MenuItem x:Name="menuItemRoomStatus" Header="Room Status                    " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemRoomStatus_Click"/>
                 <MenuItem x:Name="menuItemReceiptSearch" Header="Receipt Search                     " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemReceiptSearch_Click"/>
+                <MenuItem x:Name="menuItemExportBill" Header="Export Receipt                     " Cursor="Hand" Height="70" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemExportBill_Click"/>
                 <MenuItem x:Name="menuItemReport" Header="Report                     " Cursor="Hand" Height="69" Width="269" FontSize="16" Background="{x:Null}" BorderThickness="6,1,1,1" Click="menuItemReport_Click"/>
             </Menu>
         </Grid>
