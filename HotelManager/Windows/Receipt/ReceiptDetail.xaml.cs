@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+using HotelManager.Services;
+using HotelManager.Model;
 
 namespace HotelManager.Receipt
 {
@@ -27,6 +31,39 @@ namespace HotelManager.Receipt
         private void Window_Closed(object sender, EventArgs e)
         {
             App.mainWindow.Show();            
+        }
+
+        private void wndReceiptDetail_Loaded(object sender, RoutedEventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dbQLKS.dbConnection;
+            cmd.CommandText = "XuatHoatDon";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHD", SharedData.CurrentReceipt.MaHD);
+
+            SqlDataReader dr;
+
+            dbQLKS.dbConnection.Open();
+            dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                lblCustomerName.Content = dr["hoTen"].ToString();
+                lblCheckinDate.Content = dr["ngayBatDau"].ToString();
+                lblCheckoutDate.Content = dr["ngayTraPhong"].ToString();
+                lblHotelName.Content = dr["tenKS"].ToString();
+                lblIssuedDate.Content = dr["ngayThanhToan"].ToString();
+                lblRoomType.Content = dr["tenLoaiPhong"].ToString();
+                lblTotal.Content = dr["tongTien"].ToString() + " USD";
+            }
+
+            dbQLKS.dbConnection.Close();
+    
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

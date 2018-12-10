@@ -12,7 +12,7 @@ namespace HotelManager.Model
     public static class dbQLKS
     {
         //public static String connectionString = "server=DESKTOP-TKKCCPU\\SQLEXPRESS; database=QuanLyKhachSan;user id=sa; password=123456";
-        public static String connectionString = "server=LAP10719\\SQLEXPRESS; database=QuanLyKhachSan;user id=sa; password=123456";
+        public static String connectionString = "server=LAP10719\\SQLEXPRESS; database=QLKS;user id=sa; password=123456";
         public static SqlConnection dbConnection = new SqlConnection(connectionString);
 
         public static IDbCommand CreateCommand(String query)
@@ -80,7 +80,7 @@ namespace HotelManager.Model
 
 
         public static int Proc_DatPhong(String MaKhachSan, String MaLoaiPhong, DateTime NgayDat, DateTime NgayBatDau,
-            DateTime NgayTraPhong, String TinhTrang, String MaKH) 
+            DateTime NgayTraPhong, String MaKH) 
         {
             SqlCommand cmd = new SqlCommand("Proc_DatPhong", dbConnection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -90,7 +90,7 @@ namespace HotelManager.Model
             cmd.Parameters.AddWithValue("@NgayDat", NgayDat);
             cmd.Parameters.AddWithValue("@NgayBatDau", NgayBatDau);
             cmd.Parameters.AddWithValue("@NgayTraPhong", NgayTraPhong);
-            cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
+            //cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
 
             var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);

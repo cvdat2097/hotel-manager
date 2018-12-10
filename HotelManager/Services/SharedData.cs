@@ -18,8 +18,17 @@ namespace HotelManager.Services
         public static Uri ReportPage = new Uri("Windows/Report/Report.xaml", UriKind.Relative);
         public static Frame MainFrame;
 
-        public static HotelRow CurrentHotel;
+        public static HotelRow CurrentHotel; // Switch to RoomList
+        public static ReceiptRow CurrentReceipt; // Switch to ReceiptDetail
     }
+
+     public class ReceiptRow
+        {
+            public String MaHD { get; set; }
+            public DateTime NgayLap { get; set; }
+            public double TongTien { get; set; }
+            public String MaDP { get; set; }
+        }
 
     public class HotelRow
     {

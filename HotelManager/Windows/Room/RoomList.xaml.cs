@@ -28,7 +28,6 @@ namespace HotelManager.Room
 
         class RoomRow
         {
-            public String maPhong { get; set; }
             public String loaiPhong { get; set; }
             public String maLoaiPhong { get; set; }
             public int donGia { get; set; }
@@ -50,8 +49,8 @@ namespace HotelManager.Room
                 {
 
                     // Query Rooms
-                    SqlCommand cmd = new SqlCommand(@"Select * from Phong as PH, LoaiPhong as LP
-                                                Where PH.loaiPhong = LP.maLoaiPhong AND LP.maKS ='" + SharedData.CurrentHotel.maKS + "'",
+                    SqlCommand cmd = new SqlCommand(@"Select * from LoaiPhong as LP
+                                                Where LP.maKS ='" + SharedData.CurrentHotel.maKS + "'",
                                                dbQLKS.dbConnection);
                     cmd.CommandType = CommandType.Text;
 
@@ -69,10 +68,10 @@ namespace HotelManager.Room
                         row.donGia = (int)dr["donGia"];
                         row.loaiPhong = dr["tenLoaiPhong"].ToString();
                         row.maLoaiPhong = dr["maLoaiPhong"].ToString();
-                        row.maPhong = dr["maPhong"].ToString();
+                        //row.maPhong = dr["maPhong"].ToString();
                         row.moTa = dr["moTa"].ToString();
                         row.slTrong = (int)dr["slTrong"];
-                        row.soPhong = (int)dr["soPhong"];
+                        //row.soPhong = (int)dr["soPhong"];
 
                         RoomList.Add(row);
                     }
@@ -134,7 +133,7 @@ namespace HotelManager.Room
                 String userId = Auth.GetLoggedInUserId();
 
 
-                int status = dbQLKS.Proc_DatPhong(hotelId, roomTypeId, DateTime.Today, startDate, endDate, roomStatus, userId);
+                int status = dbQLKS.Proc_DatPhong(hotelId, roomTypeId, DateTime.Today, startDate, endDate, userId);
 
                 switch (status)
                 {

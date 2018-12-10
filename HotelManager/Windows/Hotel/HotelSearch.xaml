@@ -11,7 +11,7 @@
         <GroupBox Header="Search" HorizontalAlignment="Left" Margin="679,0,0,0" VerticalAlignment="Top" Height="216" Width="256">
             <Grid>
                 <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Click="btnSearch_Click"/>
-                <TextBox x:Name="txtCity" Text="Hà Nội" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="169" IsReadOnly="False" FontSize="14" Height="25" />
+                <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="169" IsReadOnly="False" FontSize="14" Height="25" />
                 <Label Content="City:" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtPriceFrom" HorizontalAlignment="Left" Margin="11,97,0,0" VerticalAlignment="Top" Width="106" FontSize="14" />
                 <Label Content="Price from:" HorizontalAlignment="Left" Margin="11,71,0,0" VerticalAlignment="Top" Width="91"/>
@@ -23,7 +23,7 @@
                     <ComboBoxItem Content="2"/>
                     <ComboBoxItem Content="3"/>
                     <ComboBoxItem Content="4"/>
-                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem IsSelected="True" Content="5"/>
                 </ComboBox>
                 <Button x:Name="btnShowRoom" Content="Show Rooms" HorizontalAlignment="Left" Margin="127,134,0,0" VerticalAlignment="Top" Width="107" Click="btnShowRoom_Click"/>
             </Grid>

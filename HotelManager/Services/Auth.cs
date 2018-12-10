@@ -47,6 +47,7 @@ namespace HotelManager.Services
             else
             {
                 userId = dbQLKS.Func_DangNhap_KhachHang(userName, password);
+                isCustomer = true;
             }
 
 
