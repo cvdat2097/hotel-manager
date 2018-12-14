@@ -66,7 +66,7 @@ namespace HotelManager.Windows.Receipt
 
                 int returnParam =  (int)returnParameter.Value;
 
-                if (returnParam == 2)
+                if (returnParam == 2 || returnParam == 1)
                 {
                     MessageBox.Show("Export Receipt successfully");
                 }

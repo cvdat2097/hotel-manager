@@ -8,9 +8,9 @@
         <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,105,0,0" Width="80" Height="30" FontSize="14"/>
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="108,179,0,0" FontSize="14" Click="btnLogin_Click"/>
         <Label x:Name="lblRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,180,0,0" FontSize="9" MouseDown="lblRegister_MouseDown"/>
-        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="24" Margin="108,73,0,0" TextWrapping="Wrap" Text="staff" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="24" Margin="108,73,0,0" TextWrapping="Wrap" Text="user" VerticalAlignment="Top" Width="156"/>
         <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="108,108,0,0" VerticalAlignment="Top" Width="156" Height="24" Password="123"/>
-        <CheckBox x:Name="chkStaff" IsChecked="True" Content="Staff Login" HorizontalAlignment="Left" Margin="108,146,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkStaff" Content="Staff Login" HorizontalAlignment="Left" Margin="108,146,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

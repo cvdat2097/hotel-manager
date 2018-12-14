@@ -12,7 +12,8 @@ namespace HotelManager.Model
     public static class dbQLKS
     {
         //public static String connectionString = "server=DESKTOP-TKKCCPU\\SQLEXPRESS; database=QuanLyKhachSan;user id=sa; password=123456";
-        public static String connectionString = "server=LAP10719\\SQLEXPRESS; database=QLKS;user id=sa; password=123456";
+        //public static String connectionString = "server=LAP10719\\SQLEXPRESS; database=QLKS;user id=sa; password=123456";
+        public static String connectionString = "server=LAP10719\\SQLEXPRESS; database=QuanLyKhachSan;user id=sa; password=123456";
         public static SqlConnection dbConnection = new SqlConnection(connectionString);
 
         public static IDbCommand CreateCommand(String query)
